@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Empêche TOUT débordement horizontal */
+* {
+  min-width: 0;
+}
+
+/* Optionnel : style global */
+body {
+  @apply bg-zinc-950 text-white;
+}
+
+/* ---------- THEME VIF / GLOW ---------- */
+:root {
+  --card-hover: rgba(255, 255, 255, 0.06);
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --neon-blue: #4da6ff;
+  --neon-pink: #ff4da6;
+  --neon-purple: #b366ff;
+}
+
+/* retirer scrollbar horizontale */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
