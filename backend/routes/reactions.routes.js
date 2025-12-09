@@ -60,7 +60,7 @@ router.post("/:videoId", authRequired, async (req, res) => {
             );
         }
 
-        res.json({ message: "Réaction enregistrée" });
+        res.json({ message: "Réactions enregistrées" });
     } catch (err) {
         console.error("REACTIONS POST ERROR:", err);
         res.status(500).json({ message: "Erreur serveur" });

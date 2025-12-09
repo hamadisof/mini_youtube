@@ -33,7 +33,7 @@ export default function Register() {
                 <h1 className="text-2xl font-bold text-center">Créer un compte</h1>
 
                 {error && (
-                    <div className="bg-red-600 text-white p-3 rounded-lg text-center">
+                    <div className="bg-red-500 text-white p-3 rounded-lg text-center">
                         {error}
                     </div>
                 )}

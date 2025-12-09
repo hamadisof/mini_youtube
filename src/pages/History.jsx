@@ -49,7 +49,7 @@ export default function History() {
                             <img
                                 src={video.thumbnail}
                                 alt={video.title}
-                                className="w-full h-40 object-cover"
+                                className="w-full h-35 object-cover"
                             />
 
                             <div className="p-3">
