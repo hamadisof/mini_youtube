@@ -20,6 +20,7 @@ export default function Home() {
         "Sport",
         "Food",
         "Inspiration"
+        
     ];
 
     const categoryMap = {
@@ -66,7 +67,7 @@ export default function Home() {
             </div>
 
             {/* ▬▬▬ SHORTS SECTION ▬▬▬ */}
-            <h2 className="text-lg font-semibold mt-4 mb-2">Shorts</h2>
+            <h2 className="text-lg font-semibold mt-4 mb-2">Shoorties</h2>
 
             {/* 📱 MOBILE : afficher 3 sur 8 */}
             <div className="grid grid-cols-3 gap-4 sm:hidden">

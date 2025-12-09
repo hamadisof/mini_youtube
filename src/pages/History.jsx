@@ -23,12 +23,12 @@ export default function History() {
     }, []);
 
     if (loading)
-        return <div className="text-white p-6 text-center">Chargement…</div>;
+        return <div className="text-white p-6 text-center">Chargemmmeent…</div>;
 
     if (items.length === 0)
         return (
             <div className="text-white p-6 text-center">
-                📺 Aucun historique pour le moment.
+                📺 Aucun historique pour le momentos.
             </div>
         );
 
