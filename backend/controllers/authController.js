@@ -29,10 +29,10 @@ export const login = async (req, res) => {
         const { pseudo, password } = req.body;
 
         const user = await User.findOne({ pseudo });
-        if (!user) return res.status(404).json({ message: "Utilisateur introuvable" });
+        if (!user) return res.status(404).json({ message: "Utilisateur incorrecte ou introuvable" });
 
         const match = await bcrypt.compare(password, user.password);
-        if (!match) return res.status(400).json({ message: "Mot de passe incorrect" });
+        if (!match) return res.status(400).json({ message: "Mot de passe incorrect et introuvable" });
 
         const token = jwt.sign(
             { id: user._id, pseudo: user.pseudo },

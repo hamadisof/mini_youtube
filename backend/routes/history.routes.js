@@ -33,10 +33,10 @@ router.post("/", authRequired, async (req, res) => {
             { upsert: true, new: true }
         );
 
-        res.json({ message: "Ajouté à l'historique" });
+        res.json({ message: "Ajouté à l'historiques" });
     } catch (err) {
         console.error("HISTORY POST ERROR:", err);
-        res.status(500).json({ message: "Erreur serveur" });
+        res.status(500).json({ message: "Err serveur" });
     }
 });
 
@@ -44,7 +44,7 @@ router.post("/", authRequired, async (req, res) => {
 router.delete("/", authRequired, async (req, res) => {
     try {
         await HistoryItem.deleteMany({ userId: req.userId });
-        res.json({ message: "Historique effacé" });
+        res.json({ message: "Historique effacée" });
     } catch (err) {
         console.error("HISTORY DELETE ERROR:", err);
         res.status(500).json({ message: "Erreur serveur" });
