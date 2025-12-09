@@ -63,7 +63,7 @@ router.delete("/by-id/:id", authRequired, async (req, res) => {
     try {
         const id = req.params.id;
         await Comment.deleteOne({ _id: id, userId: req.userId });
-        res.json({ message: "Commentaire supprimé (si tu en étais l'auteur)" });
+        res.json({ message: "Commentaires supprimés (si tu en étais l'auteur)" });
     } catch (err) {
         console.error("COMMENTS DELETE ERROR:", err);
         res.status(500).json({ message: "Erreur serveur" });
