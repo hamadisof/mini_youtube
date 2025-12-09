@@ -31,7 +31,7 @@ if (!MONGO_URI) {
 
 mongoose
     .connect(MONGO_URI)
-    .then(() => console.log("🟢 MongoDB connecté"))
+    .then(() => console.log("🟢 MongoDB connecté nikel"))
     .catch((err) => console.error("❌ Erreur MongoDB :", err));
 
 // --- ROUTES ---
@@ -49,7 +49,7 @@ app.use("/api/comments", commentsRoutes);
 
 // --- TEST ROOT ---
 app.get("/", (req, res) => {
-    res.send("🔥 Backend Mini-YouTube opérationnel !");
+    res.send("🔥 Backend Mini-YouTube opérationnel Youpi!");
 });
 
 // --- START ---
