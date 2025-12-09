@@ -7,7 +7,7 @@ export function authRequired(req, res, next) {
         const [, token] = header.split(" ");
 
         if (!token) {
-            return res.status(401).json({ message: "Token manquant" });
+            return res.status(401).json({ message: "Token manquants" });
         }
 
         const payload = jwt.verify(token, process.env.JWT_SECRET);
@@ -15,6 +15,6 @@ export function authRequired(req, res, next) {
         next();
     } catch (err) {
         console.error("AUTH ERROR:", err);
-        return res.status(401).json({ message: "Token invalide ou expiré" });
+        return res.status(401).json({ message: "Token invalides ou expirés" });
     }
 }
